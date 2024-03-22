@@ -1,23 +1,28 @@
 package model;
 
-public abstract class DVD {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class DVD {
 
     private String titulo;
-    private int codigoDePreco;
+
+    public TipoDVD getTipo() {
+        return tipo;
+    }
+
+    private TipoDVD tipo;
 
     private boolean ehBonus = false;
 
+    private static final ArrayList<TipoDVD> tiposDVDBonus = new ArrayList<>(List.of(TipoDVD.LANCAMENTO));
 
-    public DVD(String titulo, int codigoDePreco) {
+    public DVD(String titulo, TipoDVD tipo) {
         this.titulo = titulo;
-        this.codigoDePreco = codigoDePreco;
+        this.tipo = tipo;
+        ehBonus = tiposDVDBonus.contains(tipo);
     }
-
-/*    public DVD(String titulo) {
-        this.titulo = titulo;
-    }*/
-
-    public abstract double calcularAluguel(int diasAlugados);
 
 
     public String getTitulo() {
@@ -28,24 +33,16 @@ public abstract class DVD {
         this.titulo = titulo;
     }
 
-
-
-    public int getCodigoDePreco() {
-        return codigoDePreco;
-    }
-
-    public void setCodigoDePreco(int codigoDePreco) {
-        this.codigoDePreco = codigoDePreco;
-    }
-
-
     public boolean ehBonus() {
         return ehBonus;
     }
 
     // Método setter para modificar o atributo ehBonus
-    protected void setEhBonus(boolean ehBonus) {
+    public void setEhBonus(boolean ehBonus) {
         this.ehBonus = ehBonus;
     }
 
+    public void setTipo(TipoDVD tipo) {
+        this.tipo = tipo;
+    }
 }
