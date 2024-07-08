@@ -1,9 +1,5 @@
 ## Tarefa 1: 
-De acordo com o programa apresentado, quais as fragilidades que podem ser
-encontradas com relação a más práticas de programação ou princípios de design OO que
-não estão sendo contemplados? O sistema está pronto quando uma nova classificação de
-filme for adicionada? E quando houver reajuste de preço? O código está pronto para
-executar facilmente um novo esquema de pontos de alugador frequente? 
+De acordo com o programa apresentado, quais as fragilidades que podem ser encontradas com relação a más práticas de programação ou princípios de design OO que não estão sendo contemplados? O sistema está pronto quando uma nova classificação de filme for adicionada? E quando houver reajuste de preço? O código está pronto para executar facilmente um novo esquema de pontos de alugador frequente? 
 
 ## Resposta
 
@@ -16,7 +12,7 @@ public static final int INFANTIL = 2;
 ```
 
 #### príncipio OL - esta parte do código poderia estar em uma classe a parte, a fim de reuso.
-#### Solução: Transformar `DVD` em uma classe abstrata e para cada Atributo de enumeração a criação de uma classe específica: `DVDNormal`, `DVDLancamento`,`DVDINFantil`
+#### Solução: Transformar `DVD` em uma classe Enum e para cada Atributo de enumeração a criação de uma classe específica: `Normal`, `Lancamento`,`Infantil`
 
 
 ### CLiente

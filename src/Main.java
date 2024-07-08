@@ -1,15 +1,28 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import model.Aluguel;
+import model.Cliente;
+import model.DVD;
+import model.HtmlExtrato;
+import model.TextExtrato;
+import model.TipoDVD;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+public class Locadora {
+
+    public static void main(String[] args) {
+        Cliente c1 = new Cliente("Alex Sandro");
+        c1.setExtrato(new TextExtrato(c1));
+        c1.adicionaAluguel(new Aluguel(new DVD("O Atirador", TipoDVD.NORMAL), 10));
+        c1.adicionaAluguel(new Aluguel(new DVD("Luca", TipoDVD.INFANTIL), 2));
+        c1.adicionaAluguel(new Aluguel(new DVD("O Gato de Botas 2",
+                TipoDVD.LANCAMENTO), 30));
+                
+        c1.adicionaAluguel(new Aluguel(new DVD("Arremessando Alto",
+        TipoDVD.LANCAMENTO), 4));
+        c1.adicionaAluguel(new Aluguel(new DVD("Moana", TipoDVD.INFANTIL), 10));
+
+        c1.adicionaAluguel(new Aluguel(new DVD("Uma Noite no Museu", TipoDVD.NORMAL), 3));
+        
+        System.out.println(c1.getExtrato());
+        c1.setExtrato(new HtmlExtrato(c1));
+        System.out.println(c1.getExtrato());
     }
 }
