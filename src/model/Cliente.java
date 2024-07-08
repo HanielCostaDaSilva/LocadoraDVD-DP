@@ -1,5 +1,7 @@
 package model;
 
+
+import extrato.Extrato;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +40,7 @@ public class Cliente {
     }
 
     public double getValorTotalAluguel(){
-        double valorTotal=    this.dvdsAlugados.stream()
+        double valorTotal= this.dvdsAlugados.stream()
         .mapToDouble(Aluguel::calcularAluguel)
         .sum();
         return valorTotal;

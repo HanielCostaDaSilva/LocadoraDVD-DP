@@ -1,4 +1,4 @@
-package model;
+package model.extrato;
 
 public class NullExtrato extends Extrato {
 

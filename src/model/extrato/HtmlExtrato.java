@@ -1,4 +1,4 @@
-package model;
+package model.extrato;
 
 public class HtmlExtrato extends Extrato {
 
