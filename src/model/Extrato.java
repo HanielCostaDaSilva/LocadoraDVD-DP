@@ -1,7 +1,4 @@
-package model.extrato;
-
-import model.Cliente;
-import model.Aluguel;
+package model;
 
 import java.util.Iterator;
 

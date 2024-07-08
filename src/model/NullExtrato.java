@@ -1,7 +1,4 @@
-package model.extrato;
-
-import model.Cliente;
-
+package model;
 
 public class NullExtrato extends Extrato {
 

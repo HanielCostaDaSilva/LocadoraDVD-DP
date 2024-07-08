@@ -7,10 +7,6 @@ public class DVD {
 
     private String titulo;
 
-    public TipoDVD getTipo() {
-        return tipo;
-    }
-
     private TipoDVD tipo;
 
     private boolean ehBonus = false;
@@ -22,7 +18,6 @@ public class DVD {
         this.tipo = tipo;
         ehBonus = tiposDVDBonus.contains(tipo);
     }
-
 
     public String getTitulo() {
         return titulo;
@@ -39,6 +34,10 @@ public class DVD {
     // Método setter para modificar o atributo ehBonus
     public void setEhBonus(boolean ehBonus) {
         this.ehBonus = ehBonus;
+    }
+
+    public TipoDVD getTipo() {
+        return tipo;
     }
 
     public void setTipo(TipoDVD tipo) {

@@ -1,5 +1,4 @@
-package model.extrato;
-import model.Cliente;
+package model;
 
 public class HtmlExtrato extends Extrato {
 
