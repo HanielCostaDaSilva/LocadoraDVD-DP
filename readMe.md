@@ -18,7 +18,7 @@ javac Main
 ```
 ## Design Pattern
 
-### Princípios SOLID
+#### Princípios SOLID
 Os princípios SOLID visam garantir um código mais modular, reutilizável e fácil de manter.
 Abaixo a definição de cada princípio:
 1. **S - Princípio da Responsabilidade Única (Single Responsibility Principle - SRP):**
@@ -33,9 +33,9 @@ Abaixo a definição de cada princípio:
 5. **D - Princípio da Inversão de Dependência (Dependency Inversion Principle - DIP):**
     - Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações.
 
-### Null Object
+#### Null Object
 O padrão Null Object é utilizado para **representar a ausência de algum objeto**, evitando verificações nulas espalhadas pelo código.
 
-### Template Method
+#### Template Method
 O padrão Template Method é utilizado para quando um método realiza uma operação cujo algoritmo pode ser dividido em etapas específicas, algumas das quais podem ser definidas ou sobrescritas por subclasses.
 No projeto, foi utilizado o mesmo para gerar extratos de aluguel em diferentes formatos (texto e HTML). Onde a super classe `Extrato` define o esqueleto do método `mostrarExtrato`, enquanto as subclasses `TextExtrato` e `HTMLExtrato` implementam os métodos expecificados no passo a passo do esqueleto.
