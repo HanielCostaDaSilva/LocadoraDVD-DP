@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class Cliente {
@@ -9,7 +8,7 @@ public class Cliente {
 
     private List<Aluguel> dvdsAlugados = new ArrayList<>();
 
-    private Extrato extrato = new Extrato(this);
+    private Extrato extrato;
 
     public Cliente(String nome) {
         this.nome = nome;
@@ -19,13 +18,29 @@ public class Cliente {
         return nome;
     }
 
+    public void setExtrato(Extrato extrato){
+        this.extrato = extrato;        
+    }
+
     public void adicionaAluguel(Aluguel aluguel) {
         dvdsAlugados.add(aluguel);
     }
 
     public String getExtrato() {
 
-        return extrato.mostrarExtrato(this.dvdsAlugados);
+        return extrato.mostrarExtrato();
 
+    }
+
+    public List<Aluguel> getDvdsAlugados() {
+        return this.dvdsAlugados;
+
+    }
+
+    public double getValorTotalAluguel(){
+        double valorTotal=    this.dvdsAlugados.stream()
+        .mapToDouble(Aluguel::calcularAluguel)
+        .sum();
+        return valorTotal;
     }
 }
