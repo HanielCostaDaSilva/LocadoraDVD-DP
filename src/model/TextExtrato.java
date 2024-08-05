@@ -5,6 +5,7 @@ public class TextExtrato extends Extrato {
     public TextExtrato(Cliente cliente) {
         super(cliente);
     }
+    
     @Override
     protected String getHeader(String nomeCliente) {
        return "Registro de Alugueis de " + nomeCliente;
